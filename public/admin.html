@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col s6 offset-s3">     
+
+            <table class="striped">
+                <thead>
+                  <tr>
+                      <th>Employee ID</th>
+                      <th>Message</th>
+                      <th>Created Date</th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                  <tr ng-repeat="sub in subs">
+                    <td>{{ sub.EMAILID }}</td>
+                    <td>{{ sub.MESSAGE }}</td>
+                    <td>{{ sub.CREATEDDATE }}</td>
+                  </tr>
+
+                </tbody>
+              </table>
+    </div>
+</div>

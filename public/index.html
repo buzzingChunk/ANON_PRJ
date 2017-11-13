@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html  ng-app="AnonApp" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+  <title>Anonymous Comment</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script><!-- load angular --> 
+  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+
+  <script src="index.js"></script>
+  <script src="routes.js"></script>
+
+</head>
+  <body ng-controller="MainController">
+    <nav>   
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">DTNA Anonymous Comment</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="admin">Admin</a></li>
+            </ul>
+            <ul id="mobile-demo" class="side-nav">
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="admin">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+  <div class="container">
+    <ui-view></ui-view>
+
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </body>
+  <script>
+    $( document ).ready(function(){
+      $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      closeOnClick: true,
+      draggable: true 
+    }
+  );
+     
+
+    })
+    </script>
+</html>

@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col s6 offset-s3">
+        <p>Welcome to the DTNA Anyonmous Comment Submission Form.</p>
+        <p>Enter your comment below and press Submit, If you would like to be identified please check the box</p>
+        <form class=""> 
+            
+            <div class="row">
+                <div class="input-field">
+                    <textarea type="text" class="materialize-textarea" ng-model="formData.MESSAGE"></textarea>
+                    <label>Message</label>
+                </div>
+            </div>
+
+            <div class="row">
+                    <div class="col s6">
+                        <p>
+                            <input type="checkbox" ng-model="checked" id="test5" />
+                            <label for="test5">Identify Me</label>
+                          </p>
+                    </div>
+                    <div class="input-field col s6" ng-show="checked">
+                            <input type="text" name="id" ng-model="formData.EMAILID">
+                            <label>Employee ID</label>
+                        </div>
+                </div>
+            <div class="row">
+            <button type="submit" class="waves-effect waves-light btn" ng-click="createComment()">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+        </form>
+    </div>
+</div>
